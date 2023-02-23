@@ -1,0 +1,86 @@
+//Definiamo le variabili
+
+$font:'arial', sans-serif;
+
+
+//Questo tag (*) serve a resettare le impostazioni di default del css
+
+*{ // quindi avremmo cosi una pagina di default con:
+    margin: 0; // margine 0
+	padding: 0; // padding 0
+	font-family: $font; // il tipo di font che andremo a definire nella variabile $font
+}
+
+.contenitore{
+    border: 1px solid red;// imposto un bordo per vedere la sezione
+    width: 100%; // imposto largehzza
+    height: 100vh; // imposto aletzza tutto schermo
+    /* Con questa refola imposto il contenuto al centro della sezione */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;// imposto il font di partenza
+    .titolo{
+        font-size: 3em; // il titolo sarà 4 volte il font di partenza
+    }
+    .sottotitolo{
+        font-size: 2.7em; // il sottotilo sarà 3 volte il font di partenza
+    }
+    .elementi{
+        h3{
+            font-size: 2.3em;
+        }
+        h4{
+            font-size: 2em;
+        }
+        h5{
+            font-size: 1.5em;
+        }
+        h6{
+            font-size: 1.2em;
+        }
+    }
+    .paragrafo{
+        font-size: 1em; // avrà lo stesso valore della grandezza di default ( 16 x 1 =
+    }
+}
+
+//Responsive
+
+.contenitore-responsive {
+    width: 100%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    .riga{
+        display: flex; // metto gli elementi in riga
+        flex-wrap: wrap; //con questa direttiva vanno d'accapo quando la finestra diventa troppo piccola
+        align-items: center; // li allineo verticalmente
+        width: 100%;
+        .box{
+            width: 100%;
+            max-width: 50%;
+            height: 100vh;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            &:last-child{ // indico l'ultimo elemento, la & sta ad indicare la ripetizione della classe precedente, in questo caso ".box"
+                background-color: yellow;
+            }
+            p{
+                padding: 10px; // padding per staccare il testo dai brodi
+            }
+        }
+    }
+}
+
+
+
+//mediaquery
+
+@media only screen and (max-width: 900px) {
+    .contenitore-responsive .riga .box {
+      max-width: 100%;
+    }
+  }

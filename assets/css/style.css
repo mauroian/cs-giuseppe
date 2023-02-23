@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "arial", sans-serif;
+}
+
+.contenitore {
+  border: 1px solid red;
+  width: 100%;
+  height: 100vh;
+  /* Con questa refola imposto il contenuto al centro della sezione */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+}
+.contenitore .titolo {
+  font-size: 3em;
+}
+.contenitore .sottotitolo {
+  font-size: 2.7em;
+}
+.contenitore .elementi h3 {
+  font-size: 2.3em;
+}
+.contenitore .elementi h4 {
+  font-size: 2em;
+}
+.contenitore .elementi h5 {
+  font-size: 1.5em;
+}
+.contenitore .elementi h6 {
+  font-size: 1.2em;
+}
+.contenitore .paragrafo {
+  font-size: 1em;
+}
+
+.contenitore-responsive {
+  width: 100%;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.contenitore-responsive .riga {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+.contenitore-responsive .riga .box {
+  width: 100%;
+  max-width: 50%;
+  height: 100vh;
+  background-color: red;
+  display: flex;
+  align-items: center;
+}
+.contenitore-responsive .riga .box:last-child {
+  background-color: yellow;
+}
+.contenitore-responsive .riga .box p {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .contenitore-responsive .riga .box {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
